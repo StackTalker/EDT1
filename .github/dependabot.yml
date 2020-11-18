@@ -3,4 +3,5 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      in
+      interval: daily
+    assig
