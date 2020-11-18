@@ -6,3 +6,5 @@ updates:
       interval: daily
     assignees:
       - catchen
+    labels:
+   
