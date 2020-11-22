@@ -7,4 +7,5 @@ on:
     inputs:
       release-type:
         description: "Release Type"
-        required
+        required: true
+        defau
