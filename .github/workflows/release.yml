@@ -8,4 +8,5 @@ on:
       release-type:
         description: "Release Type"
         required: true
-        defau
+        default: "patch"
+       
