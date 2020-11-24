@@ -10,4 +10,5 @@ on:
         required: true
         default: "patch"
         type: choice
-        opti
+        options:
+          - majo
