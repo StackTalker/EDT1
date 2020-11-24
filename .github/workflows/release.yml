@@ -9,4 +9,5 @@ on:
         description: "Release Type"
         required: true
         default: "patch"
-       
+        type: choice
+        opti
