@@ -11,4 +11,5 @@ on:
         default: "patch"
         type: choice
         options:
-          - majo
+          - major
+          - 
