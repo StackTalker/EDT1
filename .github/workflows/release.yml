@@ -14,4 +14,4 @@ on:
           - major
           - minor
           - patch
-          
+          - premajor
