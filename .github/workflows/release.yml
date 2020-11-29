@@ -12,4 +12,5 @@ on:
         type: choice
         options:
           - major
-          - 
+          - minor
+          
