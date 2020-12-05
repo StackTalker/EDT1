@@ -16,4 +16,5 @@ on:
           - patch
           - premajor
           - preminor
-          - p
+          - prepatch
+          - pr
