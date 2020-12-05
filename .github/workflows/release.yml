@@ -17,4 +17,5 @@ on:
           - premajor
           - preminor
           - prepatch
-          - pr
+          - prerelease
+      prere
