@@ -18,4 +18,5 @@ on:
           - preminor
           - prepatch
           - prerelease
-      prere
+      prerelease:
+        description
