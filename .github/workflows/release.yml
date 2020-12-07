@@ -19,4 +19,5 @@ on:
           - prepatch
           - prerelease
       prerelease:
-        description
+        description: "Prerelease"
+        
