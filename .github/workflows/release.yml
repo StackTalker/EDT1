@@ -20,4 +20,5 @@ on:
           - prerelease
       prerelease:
         description: "Prerelease"
-        
+        required: true
+    
