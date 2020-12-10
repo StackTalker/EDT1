@@ -23,4 +23,5 @@ on:
         required: true
         default: false
         type: boolean
-      skip-if-n
+      skip-if-no-diff:
+        de
