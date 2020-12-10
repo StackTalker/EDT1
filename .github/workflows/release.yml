@@ -22,4 +22,5 @@ on:
         description: "Prerelease"
         required: true
         default: false
-        type: bo
+        type: boolean
+      skip-if-n
