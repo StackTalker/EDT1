@@ -22,4 +22,4 @@ on:
         description: "Prerelease"
         required: true
         default: false
-    
+        type: bo
