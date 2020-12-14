@@ -24,4 +24,4 @@ on:
         default: false
         type: boolean
       skip-if-no-diff:
-        de
+        description: "Skip if 
