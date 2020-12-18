@@ -25,4 +25,5 @@ on:
         type: boolean
       skip-if-no-diff:
         description: "Skip if no diff"
-        required: tr
+        required: true
+        default: 
