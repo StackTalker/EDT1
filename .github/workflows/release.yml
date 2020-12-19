@@ -28,4 +28,5 @@ on:
         required: true
         default: false
         type: boolean
-      dif
+      diff-targets:
+        des
