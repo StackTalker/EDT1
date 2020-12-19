@@ -30,4 +30,5 @@ on:
         type: boolean
       diff-targets:
         description: "Diff Targets"
-        re
+        required: false
+        def
