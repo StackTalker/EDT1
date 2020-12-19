@@ -29,4 +29,5 @@ on:
         default: false
         type: boolean
       diff-targets:
-        description: "Diff
+        description: "Diff Targets"
+        re
