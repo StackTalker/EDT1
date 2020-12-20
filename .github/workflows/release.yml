@@ -31,4 +31,4 @@ on:
       diff-targets:
         description: "Diff Targets"
         required: false
-        def
+        default: "action.yml"
