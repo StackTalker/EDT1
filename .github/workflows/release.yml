@@ -34,4 +34,5 @@ on:
         default: "action.yml"
         type: string
       dry-run:
-        descrip
+        description: "Dry run"
+ 
