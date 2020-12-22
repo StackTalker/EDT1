@@ -32,4 +32,5 @@ on:
         description: "Diff Targets"
         required: false
         default: "action.yml"
-        type: stri
+        type: string
+      dry-
