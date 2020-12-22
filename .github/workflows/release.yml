@@ -33,4 +33,5 @@ on:
         required: false
         default: "action.yml"
         type: string
-      dry-
+      dry-run:
+        descrip
