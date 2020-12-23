@@ -35,4 +35,4 @@ on:
         type: string
       dry-run:
         description: "Dry run"
- 
+        required: tru
