@@ -41,4 +41,4 @@ on:
 
 jobs:
   test:
-    use
+    uses: ./.github/workflows/
