@@ -45,3 +45,5 @@ jobs:
     secrets: inherit
 
   release:
+    name: Release
+    needs:
