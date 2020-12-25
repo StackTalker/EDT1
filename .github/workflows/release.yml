@@ -42,4 +42,6 @@ on:
 jobs:
   test:
     uses: ./.github/workflows/test.yml
-    secrets: inh
+    secrets: inherit
+
+  release:
