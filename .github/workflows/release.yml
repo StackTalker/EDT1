@@ -46,4 +46,5 @@ jobs:
 
   release:
     name: Release
-    needs:
+    needs: [test]
+    concurrency: rele
