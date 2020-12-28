@@ -50,4 +50,4 @@ jobs:
     concurrency: release
     runs-on: ubuntu-latest
     steps:
-      - uses: ac
+      - uses: actions/checko
