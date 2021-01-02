@@ -55,4 +55,5 @@ jobs:
           ref: "main"
           fetch-depth: 0
 
-      - id:
+      - id: release
+      
