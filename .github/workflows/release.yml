@@ -56,4 +56,4 @@ jobs:
           fetch-depth: 0
 
       - id: release
-      
+        uses: CatChen/node-pa
