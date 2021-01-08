@@ -58,4 +58,5 @@ jobs:
       - id: release
         uses: CatChen/node-package-release-action@v1
         with:
-          release-type: ${{ inputs.release-type || 
+          release-type: ${{ inputs.release-type || 'patch' }}
+          prer
