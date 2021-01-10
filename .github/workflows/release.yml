@@ -60,3 +60,4 @@ jobs:
         with:
           release-type: ${{ inputs.release-type || 'patch' }}
           prerelease: ${{ inputs.prerelease || false }}
+          update-shor
