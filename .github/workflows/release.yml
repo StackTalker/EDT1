@@ -62,4 +62,4 @@ jobs:
           prerelease: ${{ inputs.prerelease || false }}
           update-shorthand-release: true
           dry-run: ${{ inputs.dry-run || false }}
-         
+          skip-if-no-diff: ${{ in
