@@ -61,4 +61,5 @@ jobs:
           release-type: ${{ inputs.release-type || 'patch' }}
           prerelease: ${{ inputs.prerelease || false }}
           update-shorthand-release: true
-          dry-run: ${{ inputs.dry-run || fa
+          dry-run: ${{ inputs.dry-run || false }}
+         
