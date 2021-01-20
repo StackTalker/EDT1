@@ -5,3 +5,5 @@ on:
     branches: [main]
     types:
       [
+        labeled,
+  
