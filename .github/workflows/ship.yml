@@ -6,4 +6,5 @@ on:
     types:
       [
         labeled,
-  
+        unlabeled,
+        
