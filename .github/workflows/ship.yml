@@ -8,4 +8,5 @@ on:
         labeled,
         unlabeled,
         edited,
-        closed
+        closed,
+        reopened,
