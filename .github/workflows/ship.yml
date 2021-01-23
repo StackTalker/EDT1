@@ -10,3 +10,4 @@ on:
         edited,
         closed,
         reopened,
+        synchronize,
