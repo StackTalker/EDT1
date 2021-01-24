@@ -12,4 +12,6 @@ on:
         reopened,
         synchronize,
         review_requested,
-        review_request_remov
+        review_request_removed,
+      ]
+  pull_req
