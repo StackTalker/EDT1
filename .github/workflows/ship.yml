@@ -12,3 +12,4 @@ on:
         reopened,
         synchronize,
         review_requested,
+        review_r
