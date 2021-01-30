@@ -15,4 +15,4 @@ on:
         review_request_removed,
       ]
   pull_request_review:
-    type
+    types: [submitted, e
