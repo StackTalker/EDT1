@@ -17,4 +17,5 @@ on:
   pull_request_review:
     types: [submitted, edited, dismissed]
   check_run:
-    type: [created, rerequeste
+    type: [created, rerequested, completed]
+  
