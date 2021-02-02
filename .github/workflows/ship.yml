@@ -20,4 +20,5 @@ on:
     type: [created, rerequested, completed]
   check_suite:
     types: [completed]
-  workfl
+  workflow_run:
+    branches: [
