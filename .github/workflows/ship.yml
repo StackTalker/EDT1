@@ -21,4 +21,5 @@ on:
   check_suite:
     types: [completed]
   workflow_run:
-    branches: ['[0-9]+-[0-9]+-*
+    branches: ['[0-9]+-[0-9]+-*']
+    workflows: ['Test'
