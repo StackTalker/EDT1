@@ -28,4 +28,4 @@ on:
 concurrency:
   group: |-
     ${{
-      github.eve
+      github.event.pull_request.num
