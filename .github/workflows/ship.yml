@@ -29,4 +29,4 @@ concurrency:
   group: |-
     ${{
       github.event.pull_request.number ||
-      join(github.event.ch
+      join(github.event.check_run.pull_reques
