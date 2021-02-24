@@ -31,4 +31,4 @@ concurrency:
       github.event.pull_request.number ||
       join(github.event.check_run.pull_requests.*.number, ', ') ||
       join(github.event.check_suite.pull_requests.*.number, ', ') ||
-      join(github.event.workflow_run.
+      join(github.event.workflow_run.pull_requests.
