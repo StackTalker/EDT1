@@ -37,4 +37,5 @@ concurrency:
     }}
 
 jobs:
-  concurrency-g
+  concurrency-group:
+    name: C
