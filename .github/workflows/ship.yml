@@ -39,4 +39,4 @@ concurrency:
 jobs:
   concurrency-group:
     name: Concurrency group
-    r
+    runs-on: ubuntu-lat
