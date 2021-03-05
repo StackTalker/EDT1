@@ -44,4 +44,5 @@ jobs:
       - name: Concurrency group
         env:
           CONCURRENCY_GROUP: |-
-           
+            ${{
+              gi
