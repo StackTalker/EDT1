@@ -45,4 +45,4 @@ jobs:
         env:
           CONCURRENCY_GROUP: |-
             ${{
-              gi
+              github.event.pull_reque
