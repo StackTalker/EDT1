@@ -46,4 +46,4 @@ jobs:
           CONCURRENCY_GROUP: |-
             ${{
               github.event.pull_request.number ||
-              join(github.event.check_run.pull_requests.*
+              join(github.event.check_run.pull_requests.*.number, ', ') |
