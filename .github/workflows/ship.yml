@@ -48,4 +48,4 @@ jobs:
               github.event.pull_request.number ||
               join(github.event.check_run.pull_requests.*.number, ', ') ||
               join(github.event.check_suite.pull_requests.*.number, ', ') ||
-              j
+              join(github.event.wor
