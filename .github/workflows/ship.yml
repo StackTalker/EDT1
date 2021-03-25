@@ -54,3 +54,5 @@ jobs:
             }}
         run: |
           echo "::notice::Concurrency group is $CONCURRENCY_GROUP"
+
+  accept-to-s
