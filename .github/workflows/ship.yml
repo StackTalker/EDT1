@@ -56,4 +56,5 @@ jobs:
           echo "::notice::Concurrency group is $CONCURRENCY_GROUP"
 
   accept-to-ship:
-    name: Accep
+    name: Accept to Ship
+    i
