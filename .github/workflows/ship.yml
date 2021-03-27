@@ -59,4 +59,4 @@ jobs:
     name: Accept to Ship
     if: |-
       ${{
-       
+        github.base_ref == 'main' 
