@@ -61,4 +61,5 @@ jobs:
       ${{
         github.base_ref == 'main' ||
         github.event.pull_request.base.ref == 'main' ||
-        contains(github.event.check_run.pull_requests.*.base.re
+        contains(github.event.check_run.pull_requests.*.base.ref, 'main') ||
+        
