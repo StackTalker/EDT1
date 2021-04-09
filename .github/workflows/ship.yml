@@ -65,4 +65,5 @@ jobs:
         contains(github.event.check_suite.pull_requests.*.base.ref, 'main') ||
         contains(github.event.workflow_run.pull_requests.*.base.ref, 'main')
       }}
-    runs-on: ubun
+    runs-on: ubuntu-latest
+    permiss
