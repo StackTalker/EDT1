@@ -66,4 +66,5 @@ jobs:
         contains(github.event.workflow_run.pull_requests.*.base.ref, 'main')
       }}
     runs-on: ubuntu-latest
-    permiss
+    permissions: write-all
+    outpu
