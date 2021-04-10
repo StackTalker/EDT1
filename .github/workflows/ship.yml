@@ -67,4 +67,5 @@ jobs:
       }}
     runs-on: ubuntu-latest
     permissions: write-all
-    outpu
+    outputs:
+      skipp
