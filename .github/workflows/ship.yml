@@ -68,4 +68,4 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     outputs:
-      skipp
+      skipped: ${{ steps.shi
