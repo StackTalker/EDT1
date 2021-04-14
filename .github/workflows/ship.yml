@@ -75,3 +75,6 @@ jobs:
       - uses: CatChen/accept-to-ship-action@v0.4
         with:
           merge-method: squash
+          timeout: 0
+
+ 
