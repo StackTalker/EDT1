@@ -77,4 +77,5 @@ jobs:
           merge-method: squash
           timeout: 0
 
- 
+  pass-to-ship:
+    name: P
