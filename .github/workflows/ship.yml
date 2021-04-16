@@ -80,4 +80,5 @@ jobs:
   pass-to-ship:
     name: Pass to Ship
     if: |-
-      ${
+      ${{
+        github.base_
