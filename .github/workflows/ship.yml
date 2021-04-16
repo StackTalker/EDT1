@@ -81,4 +81,4 @@ jobs:
     name: Pass to Ship
     if: |-
       ${{
-        github.base_
+        github.base_ref == 'main' ||
