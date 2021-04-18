@@ -82,4 +82,5 @@ jobs:
     if: |-
       ${{
         github.base_ref == 'main' ||
-        github.event.pull_request.base.ref 
+        github.event.pull_request.base.ref == 'main' ||
+        co
