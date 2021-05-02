@@ -91,4 +91,5 @@ jobs:
     permissions: write-all
     outputs:
       skipped: ${{ steps.ship.outputs.skipped }}
-    s
+    steps:
+      - uses: action
