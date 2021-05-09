@@ -99,4 +99,6 @@ jobs:
           merge-method: squash
           timeout: 0
           request-zero-accept-zero: true
-          custom-has
+          custom-hashtag: '#pass2ship'
+
+  t
