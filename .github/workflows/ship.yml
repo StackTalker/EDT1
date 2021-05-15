@@ -102,4 +102,5 @@ jobs:
           custom-hashtag: '#pass2ship'
 
   test:
-    needs: [accept-to-ship, pass-t
+    needs: [accept-to-ship, pass-to-ship]
+    if: ${{ !n
