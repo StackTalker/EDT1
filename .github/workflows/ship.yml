@@ -102,4 +102,4 @@ jobs:
           custom-hashtag: '#pass2ship'
 
   test:
-    needs: 
+    needs: [accept-to-ship, pass-t
