@@ -103,4 +103,5 @@ jobs:
 
   test:
     needs: [accept-to-ship, pass-to-ship]
-    if: ${{ !needs.accept-to-ship.outputs.skipped || !needs.pass-to-ship.outputs.sk
+    if: ${{ !needs.accept-to-ship.outputs.skipped || !needs.pass-to-ship.outputs.skipped }}
+    uses: ./.gith
