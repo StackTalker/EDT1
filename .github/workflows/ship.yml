@@ -104,4 +104,4 @@ jobs:
   test:
     needs: [accept-to-ship, pass-to-ship]
     if: ${{ !needs.accept-to-ship.outputs.skipped || !needs.pass-to-ship.outputs.skipped }}
-    uses: ./.gith
+    uses: ./.github/workflows/test.ym
