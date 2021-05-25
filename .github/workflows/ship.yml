@@ -107,3 +107,4 @@ jobs:
     uses: ./.github/workflows/test.yml
     secrets: inherit
     with:
+      ref: '
