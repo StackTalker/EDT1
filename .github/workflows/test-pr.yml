@@ -7,3 +7,26 @@ on:
   workflow_dispatch:
 
 permissions: write-all
+
+jobs:
+  test_dirty_push_in_pull_request:
+    name: Test Dirty Push in Pull Request
+    if: ${{ startsWith(github.head_ref, 'workflows/tests/push/') }}
+    outputs:
+      touched-filename: ${{ steps.make-dirty.outputs.touched-filename }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Make dirty
+        id: make-dirty
+        run: |
+          echo "touched-filename=`git rev-parse --verify HEAD`" >> $GITHUB_OUTPUT
+          touch `git rev-parse --verify HEAD`
+
+      - uses: ./
+        id: test-action
+        with:
+          fail-if-not-clean: false
+          push-if-not-clean: true
+          request-changes-if-not-clean: false
