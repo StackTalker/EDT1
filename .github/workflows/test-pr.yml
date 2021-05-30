@@ -30,3 +30,25 @@ jobs:
           fail-if-not-clean: false
           push-if-not-clean: true
           request-changes-if-not-clean: false
+
+      - name: Verify outputs
+        env:
+          TEST_ACTION_OUTPUT: ${{ steps.test-action.outputs.status }}
+        run: |
+          if [[ $TEST_ACTION_OUTPUT != "dirty" ]]
+          then
+            exit 1;
+          fi
+
+  verify_dirty_push_in_pull_request:
+    name: Verify Dirty Push in Pull Request
+    if: ${{ startsWith(github.head_ref, 'workflows/tests/push/') }}
+    needs: test_dirty_push_in_pull_request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Verify outputs
