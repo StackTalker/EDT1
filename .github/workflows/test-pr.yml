@@ -52,3 +52,29 @@ jobs:
           fetch-depth: 0
 
       - name: Verify outputs
+        env:
+          TOUCHED_FILENAME: ${{ needs.test_dirty_push_in_pull_request.outputs.touched-filename }}
+        run: |
+          if [[ ! -f "$TOUCHED_FILENAME" ]]
+          then
+            exit 1
+          fi
+
+  test_dirty_request_changes_in_pull_request:
+    name: Test Dirty Request Changes in Pull Request
+    if: ${{ startsWith(github.head_ref, 'workflows/tests/request-changes/') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Make dirty
+        id: make-dirty
+        run: |
+          touch `git rev-parse --verify HEAD`
+
+      - uses: ./
+        id: test-action
+        with:
+          fail-if-not-clean: false
