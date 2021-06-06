@@ -78,3 +78,18 @@ jobs:
         id: test-action
         with:
           fail-if-not-clean: false
+          push-if-not-clean: false
+          request-changes-if-not-clean: true
+
+      - name: Verify outputs
+        env:
+          TEST_ACTION_OUTPUT: ${{ steps.test-action.outputs.status }}
+        run: |
+          if [[ $TEST_ACTION_OUTPUT != "dirty" ]]
+          then
+            exit 1;
+          fi
+
+  verify_dirty_request_changes_in_pull_request:
+    name: Verify Dirty Push in Pull Request
+    if: ${{ startsWith(github.head_ref, 'workflows/tests/request-changes/') }}
