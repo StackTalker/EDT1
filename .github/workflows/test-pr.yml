@@ -93,3 +93,17 @@ jobs:
   verify_dirty_request_changes_in_pull_request:
     name: Verify Dirty Push in Pull Request
     if: ${{ startsWith(github.head_ref, 'workflows/tests/request-changes/') }}
+    needs: test_dirty_request_changes_in_pull_request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Verify outputs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REVIEW_DECISION=$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)
+          echo "::notice::Review decision is $REVIEW_DECISION"
+          if [[ $REVIEW_DECISION != "CHANGES_REQUESTED" ]]
