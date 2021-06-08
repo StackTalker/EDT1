@@ -17,3 +17,21 @@ on:
         description: 'Checkout a different git ref instead of the SHA from the GitHub event.'
         required: false
         type: string
+
+jobs:
+  test_clean:
+    name: Test Clean
+    if: |-
+      ${{
+        !startsWith(github.head_ref, 'workflows/tests/') && ((
+          github.actor == 'dependabot[bot]' && 
+          github.event_name != 'push' &&
+          github.event_name != 'pull_request'
+        ) || (
+          github.actor != 'dependabot[bot]' &&
+          github.event_name != 'workflow_run'
+        ))
+      }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
