@@ -113,3 +113,27 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         if: ${{ github.event_name != 'workflow_run' }}
+        with:
+          fetch-depth: 0
+
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name == 'workflow_run' }}
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+          fetch-depth: 0
+
+      - name: Config Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Make commit
+        env:
+          SHA: ${{ github.sha }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          BASE_BRANCH_NAME: ${{ github.head_ref }}
+          TEST_BRANCH_NAME: ${{ format('workflows/tests/push/{0}-{1}-on-{2}', github.run_number, github.run_attempt, github.sha) }}
+          BASE_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "::notice::Run number is $RUN_NUMBER"
