@@ -91,3 +91,25 @@ jobs:
         env:
           TEST_ACTION_OUTPUT: ${{ steps.test-action.outputs.status }}
         run: |
+          if [[ $TEST_ACTION_OUTPUT != "dirty" ]]
+          then
+            exit 1;
+          fi
+
+  test_dirty_push:
+    name: Test Dirty Push
+    if: |-
+      ${{
+        !startsWith(github.head_ref, 'workflows/tests/') && ((
+          github.actor == 'dependabot[bot]' && 
+          github.event_name != 'push' &&
+          github.event_name != 'pull_request'
+        ) || (
+          github.actor != 'dependabot[bot]' &&
+          github.event_name != 'workflow_run'
+        ))
+      }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name != 'workflow_run' }}
