@@ -69,3 +69,25 @@ jobs:
           github.event_name != 'workflow_run'
         ))
       }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name != 'workflow_run' }}
+
+      - uses: actions/checkout@v3
+        if: ${{ github.event_name == 'workflow_run' }}
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Make dirty
+        run: |
+          touch `git rev-parse --verify HEAD`
+
+      - uses: ./
+        id: test-action
+        continue-on-error: true
+
+      - name: Verify outputs
+        env:
+          TEST_ACTION_OUTPUT: ${{ steps.test-action.outputs.status }}
+        run: |
