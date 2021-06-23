@@ -262,3 +262,20 @@ jobs:
       - name: Config Git
         run: |
           git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Make commit
+        env:
+          SHA: ${{ github.sha }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          BASE_BRANCH_NAME: ${{ github.head_ref }}
+          TEST_BRANCH_NAME: ${{ format('workflows/tests/request-changes/{0}-{1}-on-{2}', github.run_number, github.run_attempt, github.sha) }}
+          BASE_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "::notice::Run number is $RUN_NUMBER"
+          echo "::notice::Run attempt is $RUN_ATTEMPT"
+          echo "::notice::Base branch is $BASE_BRANCH_NAME"
+          echo "::notice::Base commit is `git rev-parse --verify HEAD`"
+          echo "::notice::Test branch is $TEST_BRANCH_NAME"
+          git checkout -b "$TEST_BRANCH_NAME"
