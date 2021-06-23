@@ -298,3 +298,21 @@ jobs:
           SHA: ${{ github.sha }}
           RUN_NUMBER: ${{ github.run_number }}
           RUN_ATTEMPT: ${{ github.run_attempt }}
+          BASE_BRANCH_NAME: ${{ github.head_ref }}
+          BASE_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "::notice::Base PR number is $BASE_PR_NUMBER"
+          gh pr create --base "$BASE_BRANCH_NAME" --title "Request Change Test PR for #$BASE_PR_NUMBER ($SHA)" --body "Generated from #$BASE_PR_NUMBER. Run $RUN_NUMBER. Attempt $RUN_ATTEMPT."
+          TEST_PR_NUMBER=`gh pr view | grep 'number:' | cut -f 2`
+          echo "test-pr-number=$TEST_PR_NUMBER" >> $GITHUB_OUTPUT
+          echo "::notice::Test PR number is $TEST_PR_NUMBER"
+
+      - name: Check PR
+        id: check-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CHECKS_TEMP_FILE="$(mktemp)"
+          sleep 10
+          gh pr checks --watch >> $CHECKS_TEMP_FILE
+          sleep 10
