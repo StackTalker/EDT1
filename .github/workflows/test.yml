@@ -279,3 +279,22 @@ jobs:
           echo "::notice::Base commit is `git rev-parse --verify HEAD`"
           echo "::notice::Test branch is $TEST_BRANCH_NAME"
           git checkout -b "$TEST_BRANCH_NAME"
+          touch $SHA
+          git add -A
+          git commit -am "Test commit for #$BASE_PR_NUMBER ($SHA) by $RUN_NUMBER-$RUN_ATTEMPT"
+          echo "::notice::Test commit is `git rev-parse --verify HEAD`"
+
+      - name: Git push
+        env:
+          TEST_BRANCH_NAME: ${{ format('workflows/tests/request-changes/{0}-{1}-on-{2}', github.run_number, github.run_attempt, github.sha) }}
+        run: |
+          git push -f --set-upstream origin "$TEST_BRANCH_NAME"
+          echo "::notice::Remote test branch is origin/$TEST_BRANCH_NAME"
+
+      - name: Open PR
+        id: open-pr
+        env:
+          GH_TOKEN: ${{ secrets.CREATE_PULL_REQUEST_ACTION_TOKEN }}
+          SHA: ${{ github.sha }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
