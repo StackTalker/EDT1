@@ -345,3 +345,26 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHA: ${{ github.sha }}
           RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          BASE_BRANCH_NAME: ${{ github.head_ref }}
+          TEST_PR_NUMBER: ${{ steps.open-pr.outputs.test-pr-number }}
+        run: |
+          if [ $BASE_BRANCH_NAME != '' ]
+          then
+            git checkout "$BASE_BRANCH_NAME"
+            echo "::notice::Base branch is `git branch --show-current`"
+          else
+            git checkout "$SHA"
+            echo "::notice::Base commit is `git rev-parse --verify HEAD`"
+          fi
+          gh pr close $TEST_PR_NUMBER -d -c "Finished testing $SHA by $RUN_NUMBER-$RUN_ATTEMPT. Closing PR."
+
+      - name: Delete remote branch
+        if: ${{ always() }}
+        continue-on-error: true
+        env:
+          SHA: ${{ github.sha }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          TEST_BRANCH_NAME: ${{ format('workflows/tests/request-changes/{0}-{1}-on-{2}', github.run_number, github.run_attempt, github.sha) }}
+        run: |
