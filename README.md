@@ -47,3 +47,23 @@ Save the file to `.github/workflows/build.yml`. It will start working on new Pul
 ## Options
 
 ### `fail-if-not-clean`
+
+When this option is set to `true` this action will fail if the project directory is no longer clean at the action execution time.
+
+### `push-if-not-clean`
+
+When this option is set to `true` this action will commit the new changes in the project directory and push the commit to the origin.
+
+### `push-token`
+
+The default value is `${{ github.token }}`, which is the GitHub token generated for this workflow. This token determines the identity of the user that makes the commit and pushes it to the current branch. By default, it's GitHub Action bot. However, one GitHub Action doesn't trigger another. That means when a GitHub Action bot pushes to a branch it doesn't trigger any other GitHub Actions that are usually triggered by events from this branch or this Pull Request.
+
+You can [create a different token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to work around this. You can also call other Workflows that aren't being triggered by this Workflow. You can add `workflow_run` event to the other Workflows so they are triggered explicitly after a successful run of the current Workflow.
+
+### `request-changes-token`
+
+The default value is `${{ github.token }}`, which is the GitHub token generated for this workflow. This token determines the identity of the user that requests changes. GitHub doesn't allow Pull Request author to request changes. Make sure this token doesn't represent a user that could be the Pull Request author. Usually it's fine to leave it with the default value, unless some Pull Requests are authored by the GitHub Action bot.
+
+### `commit-message`
+
+When `push-if-not-clean` is set to `true` and `git status` is not clean this option will be used as the commit message when committing the changes. Its default value is `"Changes detected by Check Git Status Action"`.
