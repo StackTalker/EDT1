@@ -67,3 +67,24 @@ The default value is `${{ github.token }}`, which is the GitHub token generated 
 ### `commit-message`
 
 When `push-if-not-clean` is set to `true` and `git status` is not clean this option will be used as the commit message when committing the changes. Its default value is `"Changes detected by Check Git Status Action"`.
+
+### `targets`
+
+The default value is `"."`. For example, it could be `"src"` or `"src/**/*.ts"` for a typical TypeScript project with source code files in the `src` directory. Use glob pattern to match multiple directories if necessary, for example `"{src,lib}"` instead of `"src lib"` or `"{src, lib}"` to match both the `src` directory and the `lib` directory.
+
+### `github-token` (deprecated)
+
+The default value is `${{ github.token }}`, which is the GitHub token generated for this workflow. You can [create a different token with a different set of permissions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and use it here as well.
+
+## FAQ
+
+### The commit created by this Action doesn't trigger any Workflow.
+
+> When you use the repository's `GITHUB_TOKEN` to perform tasks, events triggered by the `GITHUB_TOKEN` will not create a new workflow run. This prevents you from accidentally creating recursive workflow runs. -- [Source](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
+
+Use the [`workflow_run` event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run) in your other Workflows so they are triggered when this Action finishes. For example, if the Workflow running this Action is named as `Verify Build` like the example from above use the following code to trigger a follow-up Workflow name `Post-Verification`.
+
+```yaml
+name: Post-Verification
+
+on:
