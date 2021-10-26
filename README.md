@@ -88,3 +88,8 @@ Use the [`workflow_run` event](https://docs.github.com/en/actions/using-workflow
 name: Post-Verification
 
 on:
+  workflow_run:
+    branches: [master]
+    workflows: ["Verify Build"]
+    types: [completed]
+```
