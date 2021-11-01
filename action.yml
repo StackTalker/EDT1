@@ -1,2 +1,2 @@
 name: "Check Git Status"
-description: "Fail the workfl
+description: "Fail the workflow or git push based 
