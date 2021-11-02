@@ -1,3 +1,4 @@
 name: "Check Git Status"
 description: "Fail the workflow or git push based if git status is not clean."
-input
+inputs:
+  fail-if-not-clean
