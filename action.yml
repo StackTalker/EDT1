@@ -4,4 +4,5 @@ inputs:
   fail-if-not-clean:
     description: "Fail the workflow if git status is not clean."
     required: false
-    default: tr
+    default: true
+  push-if-not-clean:
