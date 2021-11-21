@@ -6,3 +6,4 @@ inputs:
     required: false
     default: true
   push-if-not-clean:
+    description: "Commit
