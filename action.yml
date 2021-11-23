@@ -6,4 +6,4 @@ inputs:
     required: false
     default: true
   push-if-not-clean:
-    description: "Commit the changes and push them to the
+    description: "Commit the changes and push them to the origin if git st
