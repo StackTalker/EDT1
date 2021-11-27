@@ -9,4 +9,5 @@ inputs:
     description: "Commit the changes and push them to the origin if git status is not clean."
     required: false
     default: false
-  request-ch
+  request-changes-if-not-clean:
+    des
