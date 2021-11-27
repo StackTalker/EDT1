@@ -7,4 +7,5 @@ inputs:
     default: true
   push-if-not-clean:
     description: "Commit the changes and push them to the origin if git status is not clean."
+    required: false
  
