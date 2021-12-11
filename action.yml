@@ -11,4 +11,5 @@ inputs:
     default: false
   request-changes-if-not-clean:
     description: "Request change when in the context of a Pull Request if git status is not clean."
-    required:
+    required: false
+    defaul
