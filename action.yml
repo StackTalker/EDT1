@@ -13,4 +13,5 @@ inputs:
     description: "Request change when in the context of a Pull Request if git status is not clean."
     required: false
     default: true
-  github-to
+  github-token:
+    description: "Gi
