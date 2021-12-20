@@ -14,4 +14,4 @@ inputs:
     required: false
     default: true
   github-token:
-    description: "GitHub token to use whe
+    description: "GitHub token to use when pushing new changes."
