@@ -17,4 +17,6 @@ inputs:
     description: "GitHub token to use when pushing new changes."
     required: false
     default: ${{ github.token }}
-    deprecationMessage: "Please use the push-token input instead.
+    deprecationMessage: "Please use the push-token input instead."
+  push-token:
+  
