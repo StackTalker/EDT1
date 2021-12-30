@@ -19,4 +19,4 @@ inputs:
     default: ${{ github.token }}
     deprecationMessage: "Please use the push-token input instead."
   push-token:
-    description: "G
+    description: "GitHub token to use whe
