@@ -21,4 +21,5 @@ inputs:
   push-token:
     description: "GitHub token to use when pushing new changes."
     required: false
-    default: ${
+    default: ${{ github.token }}
+ 
