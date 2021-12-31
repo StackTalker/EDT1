@@ -20,4 +20,5 @@ inputs:
     deprecationMessage: "Please use the push-token input instead."
   push-token:
     description: "GitHub token to use when pushing new changes."
-    required:
+    required: false
+    default: ${
