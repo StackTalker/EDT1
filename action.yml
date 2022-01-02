@@ -23,4 +23,5 @@ inputs:
     required: false
     default: ${{ github.token }}
   request-changes-token:
-    description: "GitHub token to use when requesting cha
+    description: "GitHub token to use when requesting changes in a Pull Request."
+    re
