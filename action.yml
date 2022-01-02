@@ -23,4 +23,4 @@ inputs:
     required: false
     default: ${{ github.token }}
   request-changes-token:
-    description: "Gi
+    description: "GitHub token to use wh
