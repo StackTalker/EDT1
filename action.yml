@@ -25,4 +25,5 @@ inputs:
   request-changes-token:
     description: "GitHub token to use when requesting changes in a Pull Request."
     required: false
-    default: ${{ github.tok
+    default: ${{ github.token }}
+  commit-message:
