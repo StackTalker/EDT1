@@ -27,3 +27,4 @@ inputs:
     required: false
     default: ${{ github.token }}
   commit-message:
+    description: "The
