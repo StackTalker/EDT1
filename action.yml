@@ -28,4 +28,5 @@ inputs:
     default: ${{ github.token }}
   commit-message:
     description: "The commit message to use when `push-if-not-clean` is `true` and there are changes."
-    required: fal
+    required: false
+    default: "Change
