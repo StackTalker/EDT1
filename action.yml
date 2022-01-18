@@ -29,4 +29,4 @@ inputs:
   commit-message:
     description: "The commit message to use when `push-if-not-clean` is `true` and there are changes."
     required: false
-    default: "Changes detected by 
+    default: "Changes detected by Check Git Status
