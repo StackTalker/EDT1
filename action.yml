@@ -31,4 +31,4 @@ inputs:
     required: false
     default: "Changes detected by Check Git Status Action"
   request-changes-comment:
-    description
+    description: "The comment t
