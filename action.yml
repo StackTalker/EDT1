@@ -31,4 +31,4 @@ inputs:
     required: false
     default: "Changes detected by Check Git Status Action"
   request-changes-comment:
-    description: "The comment to use when `request-changes-if-n
+    description: "The comment to use when `request-changes-if-not-clean` is 
