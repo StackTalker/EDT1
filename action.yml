@@ -33,4 +33,4 @@ inputs:
   request-changes-comment:
     description: "The comment to use when `request-changes-if-not-clean` is `true` and there are changes."
     required: false
-    default: "Changes detected b
+    default: "Changes detected by Check Git Status
