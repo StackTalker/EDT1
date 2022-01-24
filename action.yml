@@ -36,4 +36,5 @@ inputs:
     default: "Changes detected by Check Git Status Action"
   targets:
     description: "Files, directories, and/or globs to check and commit."
-    required
+    required: false
+    default:
