@@ -35,4 +35,4 @@ inputs:
     required: false
     default: "Changes detected by Check Git Status Action"
   targets:
-    description: 
+    description: "Files, directories,
