@@ -37,4 +37,6 @@ inputs:
   targets:
     description: "Files, directories, and/or globs to check and commit."
     required: false
-    default:
+    default: "."
+outputs:
+  
