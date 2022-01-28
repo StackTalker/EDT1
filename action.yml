@@ -39,4 +39,5 @@ inputs:
     required: false
     default: "."
 outputs:
-  
+  status:
+    descrip
