@@ -40,4 +40,4 @@ inputs:
     default: "."
 outputs:
   status:
-    description: "Is git statu
+    description: "Is git status clean or di
