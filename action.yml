@@ -41,4 +41,4 @@ inputs:
 outputs:
   status:
     description: "Is git status clean or dirty?"
-    value: ${{ steps.git-statu
+    value: ${{ steps.git-status.outputs.status 
