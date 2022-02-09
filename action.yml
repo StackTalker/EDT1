@@ -45,4 +45,4 @@ outputs:
 runs:
   using: "composite"
   steps:
- 
+    - id: git-status
