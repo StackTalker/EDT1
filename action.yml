@@ -40,4 +40,5 @@ inputs:
     default: "."
 outputs:
   status:
-    description: "Is git status clean or di
+    description: "Is git status clean or dirty?"
+    value:
