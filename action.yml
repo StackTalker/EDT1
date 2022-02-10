@@ -49,4 +49,4 @@ runs:
       name: git status
       shell: bash
       env:
-       
+        TARGETS: ${{ inp
