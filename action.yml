@@ -47,4 +47,6 @@ runs:
   steps:
     - id: git-status
       name: git status
-      shell:
+      shell: bash
+      env:
+       
