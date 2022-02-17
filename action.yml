@@ -50,4 +50,5 @@ runs:
       shell: bash
       env:
         TARGETS: ${{ inputs.targets }}
-   
+      run: |
+        echo 
