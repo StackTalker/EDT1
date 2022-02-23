@@ -52,4 +52,4 @@ runs:
         TARGETS: ${{ inputs.targets }}
       run: |
         echo '::group::git status'
-      
+        if git rev-parse
