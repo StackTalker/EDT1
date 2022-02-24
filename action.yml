@@ -52,4 +52,5 @@ runs:
         TARGETS: ${{ inputs.targets }}
       run: |
         echo '::group::git status'
-        if git rev-parse --verify HEAD >/
+        if git rev-parse --verify HEAD >/dev/null 2>&1
+      
