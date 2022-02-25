@@ -53,4 +53,5 @@ runs:
       run: |
         echo '::group::git status'
         if git rev-parse --verify HEAD >/dev/null 2>&1
-      
+        then
+          ag
