@@ -56,4 +56,5 @@ runs:
         then
           against=HEAD
         else
-          # Initial commit: diff against an empty tr
+          # Initial commit: diff against an empty tree object
+    
