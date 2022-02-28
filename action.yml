@@ -56,4 +56,4 @@ runs:
         then
           against=HEAD
         else
-          # Ini
+          # Initial commit: dif
