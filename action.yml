@@ -57,4 +57,4 @@ runs:
           against=HEAD
         else
           # Initial commit: diff against an empty tree object
-          against=$(gi
+          against=$(git hash-object -t
