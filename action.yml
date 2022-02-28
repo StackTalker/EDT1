@@ -56,4 +56,4 @@ runs:
         then
           against=HEAD
         else
-          # Initial commit: dif
+          # Initial commit: diff against an empty tr
