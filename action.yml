@@ -59,4 +59,4 @@ runs:
           # Initial commit: diff against an empty tree object
           against=$(git hash-object -t tree /dev/null)
         fi
-        git add
+        git add -N "$TARGETS"
