@@ -60,3 +60,4 @@ runs:
           against=$(git hash-object -t tree /dev/null)
         fi
         git add -N "$TARGETS"
+        if test $(git di
