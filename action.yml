@@ -64,4 +64,4 @@ runs:
         then
           echo "status=dirty" >> $GITHUB_OUTPUT
           echo "::notice::Git status is dirty"
-         
+          git diff --name
