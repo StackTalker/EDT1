@@ -62,4 +62,5 @@ runs:
         git add -N "$TARGETS"
         if test $(git diff --name-only $against | wc -l) != 0
         then
-          echo "status=dirty" >> $GITHUB_OUT
+          echo "status=dirty" >> $GITHUB_OUTPUT
+          e
