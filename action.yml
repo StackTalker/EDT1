@@ -63,4 +63,4 @@ runs:
         if test $(git diff --name-only $against | wc -l) != 0
         then
           echo "status=dirty" >> $GITHUB_OUTPUT
-          e
+          echo "::notice::Git s
