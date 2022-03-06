@@ -65,4 +65,5 @@ runs:
           echo "status=dirty" >> $GITHUB_OUTPUT
           echo "::notice::Git status is dirty"
           git diff --name-only $against | xargs -n1 -I {} echo "::notice file={}::  File: {}"
-        e
+        else
+          echo
