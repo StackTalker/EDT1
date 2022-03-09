@@ -67,4 +67,4 @@ runs:
           git diff --name-only $against | xargs -n1 -I {} echo "::notice file={}::  File: {}"
         else
           echo "status=clean" >> $GITHUB_OUTPUT
-          e
+          echo "::notice::Git status 
