@@ -69,4 +69,4 @@ runs:
           echo "status=clean" >> $GITHUB_OUTPUT
           echo "::notice::Git status is clean"
         fi
-  
+        echo '
