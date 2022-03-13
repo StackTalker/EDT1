@@ -72,4 +72,5 @@ runs:
         echo '::endgroup'
 
     - id: gh-pr-review
-      name: gh pr re
+      name: gh pr review
+      if: ${
