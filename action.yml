@@ -73,4 +73,5 @@ runs:
 
     - id: gh-pr-review
       name: gh pr review
-      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.request-changes-if-not-clean == 'true' && github.event_name == 
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.request-changes-if-not-clean == 'true' && github.event_name == 'pull_request' }}
+    
