@@ -77,4 +77,5 @@ runs:
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.request-changes-token }}
-        LEGACY_TOKEN: ${{ inputs.github-token
+        LEGACY_TOKEN: ${{ inputs.github-token }}
+        REQUEST_CH
