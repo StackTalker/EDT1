@@ -78,4 +78,4 @@ runs:
       env:
         GH_TOKEN: ${{ inputs.request-changes-token }}
         LEGACY_TOKEN: ${{ inputs.github-token }}
-        REQUEST_CHANGES_COMMENT: ${{
+        REQUEST_CHANGES_COMMENT: ${{ inputs.request-changes-c
