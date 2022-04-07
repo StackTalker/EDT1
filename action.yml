@@ -80,4 +80,4 @@ runs:
         LEGACY_TOKEN: ${{ inputs.github-token }}
         REQUEST_CHANGES_COMMENT: ${{ inputs.request-changes-comment }}
       run: |
-        echo '
+        echo '::group::gh pr review'
