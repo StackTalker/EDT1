@@ -81,3 +81,4 @@ runs:
         REQUEST_CHANGES_COMMENT: ${{ inputs.request-changes-comment }}
       run: |
         echo '::group::gh pr review'
+        if [[ "
