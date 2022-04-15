@@ -81,4 +81,4 @@ runs:
         REQUEST_CHANGES_COMMENT: ${{ inputs.request-changes-comment }}
       run: |
         echo '::group::gh pr review'
-        if [[ "$GITHUB_TOKEN" = "$GH_TOKEN" ]] && [[ "$GI
+        if [[ "$GITHUB_TOKEN" = "$GH_TOKEN" ]] && [[ "$GITHUB_TOKEN" != "$LE
