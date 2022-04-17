@@ -85,4 +85,4 @@ runs:
         then
           GH_TOKEN="$LEGACY_TOKEN"
         fi
-        gh
+        gh pr review -rb "$REQUEST_CHA
