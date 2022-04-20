@@ -88,4 +88,5 @@ runs:
         gh pr review -rb "$REQUEST_CHANGES_COMMENT"
         echo '::endgroup::'
 
-    - id: git-
+    - id: git-config
+      na
