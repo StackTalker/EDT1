@@ -86,4 +86,4 @@ runs:
           GH_TOKEN="$LEGACY_TOKEN"
         fi
         gh pr review -rb "$REQUEST_CHANGES_COMMENT"
-        
+        echo '::endgroup
