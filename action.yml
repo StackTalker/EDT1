@@ -89,4 +89,5 @@ runs:
         echo '::endgroup::'
 
     - id: git-config
-      na
+      name: git config
+      i
