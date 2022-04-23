@@ -90,4 +90,4 @@ runs:
 
     - id: git-config
       name: git config
-      if: ${{ steps.git-status.o
+      if: ${{ steps.git-status.outputs.status == 
