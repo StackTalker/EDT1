@@ -91,4 +91,5 @@ runs:
     - id: git-config
       name: git config
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_request' }}
-    
+      shell: bash
+      env:
