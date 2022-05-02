@@ -93,3 +93,4 @@ runs:
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_request' }}
       shell: bash
       env:
+        GITHUB_TOKEN: 
