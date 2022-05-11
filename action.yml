@@ -94,4 +94,5 @@ runs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        GH_TOKEN: "${{ 
+        GH_TOKEN: "${{ inputs.push-token }}"
+        
