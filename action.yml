@@ -95,4 +95,6 @@ runs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
         GH_TOKEN: "${{ inputs.push-token }}"
-        LEGACY_TOKEN: ${{ inputs.github
+        LEGACY_TOKEN: ${{ inputs.github-token }}
+      run: |
+ 
