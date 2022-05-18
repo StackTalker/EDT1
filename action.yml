@@ -98,4 +98,4 @@ runs:
         LEGACY_TOKEN: ${{ inputs.github-token }}
       run: |
         echo '::group::git config'
-        if [[ "$GITHUB_TOKEN" = "$GH_TOKEN" ]]
+        if [[ "$GITHUB_TOKEN" = "$GH_TOKEN" ]] && [[ "$GITHUB_TOKEN" !=
