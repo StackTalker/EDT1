@@ -98,4 +98,4 @@ runs:
         LEGACY_TOKEN: ${{ inputs.github-token }}
       run: |
         echo '::group::git config'
-  
+        if [[ "$GITHU
