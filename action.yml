@@ -102,4 +102,5 @@ runs:
         then
           GH_TOKEN="$LEGACY_TOKEN"
         fi
-        if [[ "$GITHUB_TOKEN" != "$
+        if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
+    
