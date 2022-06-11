@@ -104,4 +104,4 @@ runs:
         fi
         if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
         then
-          U
+          USERNAME=$(git log 
