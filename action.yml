@@ -105,3 +105,4 @@ runs:
         if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
         then
           USERNAME=$(git log -n 1 --pretty=format:%an)
+          USEREMAI
