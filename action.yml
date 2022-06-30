@@ -106,4 +106,5 @@ runs:
         then
           USERNAME=$(git log -n 1 --pretty=format:%an)
           USEREMAIL=$(git log -n 1 --pretty=format:%ae)
- 
+        else
+   
