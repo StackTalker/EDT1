@@ -108,4 +108,6 @@ runs:
           USEREMAIL=$(git log -n 1 --pretty=format:%ae)
         else
           USERNAME="GitHub Action"
-          USEREMAIL="41898282+github-actions[bot]@users.noreply.git
+          USEREMAIL="41898282+github-actions[bot]@users.noreply.github.com"
+        fi
+ 
