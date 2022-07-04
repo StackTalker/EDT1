@@ -110,4 +110,5 @@ runs:
           USERNAME="GitHub Action"
           USEREMAIL="41898282+github-actions[bot]@users.noreply.github.com"
         fi
-        echo "::notice::Set git user name: $USER
+        echo "::notice::Set git user name: $USERNAME"
+        echo 
