@@ -114,4 +114,6 @@ runs:
         echo "::notice::Set git user email: $USEREMAIL"
         git config --global user.name "$USERNAME"
         git config --global user.email "$USEREMAIL"
-        
+        echo '::groupend::'
+
+   
