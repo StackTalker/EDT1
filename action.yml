@@ -118,4 +118,4 @@ runs:
 
     - id: gh-auth
       name: gh auth
-     
+      if: ${{ step
