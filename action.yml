@@ -118,4 +118,4 @@ runs:
 
     - id: gh-auth
       name: gh auth
-      if: ${{ steps.git-status.outpu
+      if: ${{ steps.git-status.outputs.status == 'dirt
