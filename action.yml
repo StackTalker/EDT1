@@ -113,4 +113,5 @@ runs:
         echo "::notice::Set git user name: $USERNAME"
         echo "::notice::Set git user email: $USEREMAIL"
         git config --global user.name "$USERNAME"
-        git config --global user.email "
+        git config --global user.email "$USEREMAIL"
+        
