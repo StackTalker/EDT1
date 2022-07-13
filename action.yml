@@ -118,4 +118,4 @@ runs:
 
     - id: gh-auth
       name: gh auth
-      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-i
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == '
