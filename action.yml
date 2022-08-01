@@ -120,4 +120,5 @@ runs:
       name: gh auth
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' }}
       shell: bash
-      env
+      env:
+        GITHUB_TOKEN: $
