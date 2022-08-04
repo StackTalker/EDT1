@@ -121,4 +121,5 @@ runs:
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' }}
       shell: bash
       env:
-        GITHUB_TOKEN: $
+        GITHUB_TOKEN: ${{ github.token }}
+ 
