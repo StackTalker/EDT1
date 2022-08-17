@@ -122,4 +122,5 @@ runs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        GH_TOKEN: "${{ inputs.push-t
+        GH_TOKEN: "${{ inputs.push-token }}"
+        LEGACY_T
