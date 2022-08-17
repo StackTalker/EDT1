@@ -122,4 +122,4 @@ runs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        GH_TOK
+        GH_TOKEN: "${{ inputs.push-t
