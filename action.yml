@@ -125,4 +125,4 @@ runs:
         GH_TOKEN: "${{ inputs.push-token }}"
         LEGACY_TOKEN: ${{ inputs.github-token }}
       run: |
-     
+        echo '::group::gh au
