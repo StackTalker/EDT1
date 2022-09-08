@@ -128,4 +128,4 @@ runs:
         echo '::group::gh auth'
         if [[ "$GITHUB_TOKEN" = "$GH_TOKEN" ]] && [[ "$GITHUB_TOKEN" != "$LEGACY_TOKEN" ]]
         then
-        
+          GH_TOKEN="$LEGAC
