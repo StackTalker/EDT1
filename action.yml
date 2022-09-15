@@ -132,4 +132,5 @@ runs:
         fi
         if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
         then
-          gh auth 
+          gh auth status
+          g
