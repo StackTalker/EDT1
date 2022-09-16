@@ -133,4 +133,4 @@ runs:
         if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
         then
           gh auth status
-          gh api -H "Acc
+          gh api -H "Accept: application/v
