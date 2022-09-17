@@ -133,4 +133,5 @@ runs:
         if [[ "$GITHUB_TOKEN" != "$GH_TOKEN" ]]
         then
           gh auth status
-          gh api -H "Accept: application/vnd.github+json" /use
+          gh api -H "Accept: application/vnd.github+json" /user
+          gh auth setup-
