@@ -134,4 +134,5 @@ runs:
         then
           gh auth status
           gh api -H "Accept: application/vnd.github+json" /user
-          gh auth setup-
+          gh auth setup-git
+          OVERRIDE_
