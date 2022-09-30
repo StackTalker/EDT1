@@ -138,4 +138,4 @@ runs:
           OVERRIDE_LOGIN=$(gh api -H "Accept: application/vnd.github+json" /user -q '.login')
           OVERRIDE_REMOTE=$(git remote get-url origin --push | sed 's/^https:\/\//https:\/\/'"$OVERRIDE_LOGIN:$GH_TOKEN"'@/')
           echo "login=$OVERRIDE_LOGIN" >> $GITHUB_OUTPUT
-          echo "remote=$OVERRIDE_REMOTE" >>
+          echo "remote=$OVERRIDE_REMOTE" >> $GITHUB_OUTPUT
