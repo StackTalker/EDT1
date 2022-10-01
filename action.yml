@@ -139,3 +139,5 @@ runs:
           OVERRIDE_REMOTE=$(git remote get-url origin --push | sed 's/^https:\/\//https:\/\/'"$OVERRIDE_LOGIN:$GH_TOKEN"'@/')
           echo "login=$OVERRIDE_LOGIN" >> $GITHUB_OUTPUT
           echo "remote=$OVERRIDE_REMOTE" >> $GITHUB_OUTPUT
+        fi
+ 
