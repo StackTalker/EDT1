@@ -140,4 +140,6 @@ runs:
           echo "login=$OVERRIDE_LOGIN" >> $GITHUB_OUTPUT
           echo "remote=$OVERRIDE_REMOTE" >> $GITHUB_OUTPUT
         fi
-        echo ':
+        echo '::endgroup::'
+
+    - id: git-c
