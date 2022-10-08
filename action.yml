@@ -144,4 +144,4 @@ runs:
 
     - id: git-commit
       name: git commit
-      if: $
+      if: ${{ steps.git-status.o
