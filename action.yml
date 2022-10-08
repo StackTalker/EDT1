@@ -143,4 +143,5 @@ runs:
         echo '::endgroup::'
 
     - id: git-commit
-      name: git
+      name: git commit
+      if: $
