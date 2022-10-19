@@ -145,4 +145,6 @@ runs:
     - id: git-commit
       name: git commit
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_request' }}
-      shell:
+      shell: bash
+      env:
+       
