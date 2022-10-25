@@ -148,4 +148,6 @@ runs:
       shell: bash
       env:
         COMMIT_MESSAGE: ${{ inputs.commit-message }}
-        TARGETS: ${{ inputs.target
+        TARGETS: ${{ inputs.targets }}
+      run: |
+  
