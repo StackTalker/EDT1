@@ -151,4 +151,5 @@ runs:
         TARGETS: ${{ inputs.targets }}
       run: |
         echo '::group::git commit'
-        git
+        git add "$TARGETS"
+  
