@@ -150,4 +150,5 @@ runs:
         COMMIT_MESSAGE: ${{ inputs.commit-message }}
         TARGETS: ${{ inputs.targets }}
       run: |
-        echo '::group
+        echo '::group::git commit'
+        git
