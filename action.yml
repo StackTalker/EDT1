@@ -152,4 +152,4 @@ runs:
       run: |
         echo '::group::git commit'
         git add "$TARGETS"
-  
+        git commit 
