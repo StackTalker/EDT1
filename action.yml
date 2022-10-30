@@ -152,4 +152,5 @@ runs:
       run: |
         echo '::group::git commit'
         git add "$TARGETS"
-        git commit -m "$COMMIT_MESSAGE
+        git commit -m "$COMMIT_MESSAGE"
+        echo '::gro
