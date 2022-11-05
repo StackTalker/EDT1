@@ -155,4 +155,5 @@ runs:
         git commit -m "$COMMIT_MESSAGE"
         echo '::groupend::'
 
-    - id:
+    - id: git-fetch
+      name
