@@ -157,4 +157,4 @@ runs:
 
     - id: git-fetch
       name: git fetch
-      if: ${{ steps.git-status.outp
+      if: ${{ steps.git-status.outputs.status == 'dir
