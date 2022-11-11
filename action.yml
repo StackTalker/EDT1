@@ -157,4 +157,4 @@ runs:
 
     - id: git-fetch
       name: git fetch
-      if: ${{ steps.git-status.outputs.status == 'dir
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-
