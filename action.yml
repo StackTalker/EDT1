@@ -157,4 +157,4 @@ runs:
 
     - id: git-fetch
       name: git fetch
-      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.ev
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_re
