@@ -161,4 +161,4 @@ runs:
       shell: bash
       run: |
         echo '::group::git fetch'
-        git
+        git fetch --unshallow orig
