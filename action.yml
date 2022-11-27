@@ -160,4 +160,5 @@ runs:
       if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_request' }}
       shell: bash
       run: |
-        echo '::gr
+        echo '::group::git fetch'
+        git
