@@ -162,4 +162,6 @@ runs:
       run: |
         echo '::group::git fetch'
         git fetch --unshallow origin
-        echo '::end
+        echo '::endgroup::'
+
+    - 
