@@ -166,4 +166,4 @@ runs:
 
     - id: git-push
       name: git push
-      if: ${{ ste
+      if: ${{ steps.git-status.outputs.stat
