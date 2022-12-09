@@ -166,4 +166,4 @@ runs:
 
     - id: git-push
       name: git push
-      if: ${{ steps.git-status.outputs.status == 'dirty' && input
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean =
