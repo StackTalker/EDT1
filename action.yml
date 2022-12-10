@@ -166,4 +166,5 @@ runs:
 
     - id: git-push
       name: git push
-      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_
+      if: ${{ steps.git-status.outputs.status == 'dirty' && inputs.push-if-not-clean == 'true' && github.event_name == 'pull_request' }}
+   
