@@ -172,4 +172,4 @@ runs:
         BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
         OVERRIDE_REMOTE: ${{ steps.gh-auth.outputs.remote }}
       run: |
-        e
+        echo '::group::git pu
