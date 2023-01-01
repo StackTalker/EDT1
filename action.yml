@@ -173,4 +173,4 @@ runs:
         OVERRIDE_REMOTE: ${{ steps.gh-auth.outputs.remote }}
       run: |
         echo '::group::git push'
-        if [[ "$OVERR
+        if [[ "$OVERRIDE_REMOTE" != "" ]]
