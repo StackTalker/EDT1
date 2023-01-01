@@ -172,4 +172,5 @@ runs:
         BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
         OVERRIDE_REMOTE: ${{ steps.gh-auth.outputs.remote }}
       run: |
-        echo '::group::git pu
+        echo '::group::git push'
+        if [[ "$OVERR
