@@ -175,4 +175,4 @@ runs:
         echo '::group::git push'
         if [[ "$OVERRIDE_REMOTE" != "" ]]
         then
-          echo "::notice::git push -f --set-upstream $OVERRIDE_REM
+          echo "::notice::git push -f --set-upstream $OVERRIDE_REMOTE HEAD:refs/heads/$
