@@ -181,4 +181,4 @@ runs:
           echo "::notice::git push -f --set-upstream origin HEAD:refs/heads/$BRANCH_NAME"
           git push -f --set-upstream origin "HEAD:refs/heads/$BRANCH_NAME"
         fi
-   
+        echo '::endgroup::'
