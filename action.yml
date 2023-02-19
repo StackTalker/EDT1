@@ -182,3 +182,6 @@ runs:
           git push -f --set-upstream origin "HEAD:refs/heads/$BRANCH_NAME"
         fi
         echo '::endgroup::'
+
+    - id: exit-1
+ 
