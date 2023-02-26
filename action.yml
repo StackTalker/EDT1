@@ -185,4 +185,5 @@ runs:
 
     - id: exit-1
       name: exit 1
-      if: ${{ steps.git-status.outputs.status == 'dirty' && (inputs.fail-if-not-clean == '
+      if: ${{ steps.git-status.outputs.status == 'dirty' && (inputs.fail-if-not-clean == 'true') }}
+      shell:
