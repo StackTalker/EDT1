@@ -188,3 +188,5 @@ runs:
       if: ${{ steps.git-status.outputs.status == 'dirty' && (inputs.fail-if-not-clean == 'true') }}
       shell: bash
       run: exit 1
+branding:
+  icon: 
