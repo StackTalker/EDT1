@@ -189,4 +189,5 @@ runs:
       shell: bash
       run: exit 1
 branding:
-  icon: 
+  icon: "edit-3"
+  color: "red"
